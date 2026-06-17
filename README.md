@@ -97,6 +97,11 @@ The pipeline outputs structured metrics ready for dashboards and reporting:
 
 These outputs are designed to feed directly into human risk dashboards and support data-driven decision-making.
 
+## 🧠 Implementation Note
+
+The solution was built using Dify workflows with Python code nodes.  
+For demonstration purposes, the core logic has been modularized into standalone Python scripts.
+
 ## 🔮 Future Improvements
 
 - 🧠 AI-powered risk prediction and behavioural modeling  
