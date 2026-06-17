@@ -30,6 +30,22 @@ It eliminates manual reporting while providing actionable insights, including tr
 - Accelerates decision-making with real-time, actionable insights
 - Increases efficiency and scalability of reporting across multiple campaigns
 
+## 🧩 End-to-End Pipeline
+
+```mermaid
+flowchart LR
+A[Input Data - Excel/CSV] --> B[Data Preprocessing]
+
+B --> C[Click Metrics]
+B --> D[Reporting Metrics]
+
+C --> E[Risk Classification]
+D --> E
+
+E --> F[AI Summary]
+
+F --> G[Final Output - Click Rate / Reporting Rate / Scenario / Risk]
+``
 ## ⚙️ Data Processing
 
 The preprocessing logic (originally implemented in Dify) is available in:
@@ -83,19 +99,4 @@ The pipeline outputs structured metrics ready for dashboards and reporting:
 
 These outputs are designed to feed directly into human risk dashboards and support data-driven decision-making.
 
-## 🧩 End-to-End Pipeline
 
-```mermaid
-flowchart LR
-A[Input Data - Excel/CSV] --> B[Data Preprocessing]
-
-B --> C[Click Metrics]
-B --> D[Reporting Metrics]
-
-C --> E[Risk Classification]
-D --> E
-
-E --> F[AI Summary]
-
-F --> G[Final Output - Click Rate / Reporting Rate / Scenario / Risk]
-``
