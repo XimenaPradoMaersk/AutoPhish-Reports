@@ -75,6 +75,7 @@ Based on user behavior (click vs report rates), enabling targeted awareness acti
 ## 🧩 End-to-End Pipeline
 
 The solution automates phishing reporting using a multi-step AI workflow:
+
 ## 🧩 Solution Architecture
 
 ```mermaid
@@ -93,3 +94,4 @@ D --> E
 E --> F[🤖 AI / LLM Node<br>Executive Summary Generation]
 
 F --> G[📤 Final Output<br>Insights + Metrics + Risk Level]
+``
