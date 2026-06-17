@@ -85,8 +85,6 @@ These outputs are designed to feed directly into human risk dashboards and suppo
 
 ## 🧩 End-to-End Pipeline
 
-## 🧩 End-to-End Pipeline
-
 ```mermaid
 flowchart TD
 A[Input Data] --> B[Preprocessing]
@@ -96,11 +94,4 @@ C --> E[Risk Classification]
 D --> E
 E --> F[AI Summary]
 F --> G[Final Output]
-``
-
-## 🎯 Output Design
-
-The final node structures all outputs into standardized variables, enabling seamless integration with dashboards and reporting tools.
-
-This ensures insights are not only generated, but also easily consumable for leadership and risk analysis.
 ``
