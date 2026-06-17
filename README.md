@@ -96,3 +96,10 @@ The pipeline outputs structured metrics ready for dashboards and reporting:
 - **Risk Label** – Assigned risk level (e.g., Low, Medium, High)  
 
 These outputs are designed to feed directly into human risk dashboards and support data-driven decision-making.
+
+## 🔮 Future Improvements
+
+- 🧠 AI-powered risk prediction and behavioural modeling  
+- 📊 Advanced dashboards with live insights  
+
+
