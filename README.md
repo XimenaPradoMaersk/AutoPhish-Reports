@@ -88,7 +88,7 @@ These outputs are designed to feed directly into human risk dashboards and suppo
 The solution automates phishing reporting using a multi-step AI workflow:
 
 ## 🧩 Solution Architecture
-
+```mermaid
 flowchart LR
 
 A[Input Data]
