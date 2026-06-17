@@ -30,4 +30,12 @@ It eliminates manual reporting while providing actionable insights, including tr
 - Accelerates decision-making with real-time, actionable insights
 - Increases efficiency and scalability of reporting across multiple campaigns
 
-``
+## ⚙️ Data Processing
+
+The preprocessing logic (originally implemented in Dify) is available in:
+`/src/data_preprocessing.py`
+
+It handles:
+- Data cleaning
+- Duplicate removal
+- User activity prioritization
