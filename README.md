@@ -86,12 +86,36 @@ These outputs are designed to feed directly into human risk dashboards and suppo
 ## 🧩 End-to-End Pipeline
 
 ```mermaid
-flowchart TD
-A[Input Data] --> B[Preprocessing]
-B --> C[Click Metrics]
-B --> D[Reporting Metrics]
-C --> E[Risk Classification]
+flowchart LR
+
+A[📥 Input Data<br>Phishing Simulation Files<br>(Excel / CSV)]
+--> B[🧹 Data Preprocessing<br>
+- Remove duplicates<br>
+- Normalize data<br>
+- Prioritize user actions]
+
+B --> C[📊 Click Metrics Calculation<br>
+- Total users<br>
+- Clicked users<br>
+- Click rate]
+
+B --> D[📢 Reporting Metrics Calculation<br>
+- Reported users<br>
+- Reporting rate]
+
+C --> E[🧠 Risk Classification<br>
+- Behavioral analysis<br>
+- Scenario definition<br>
+- Risk labeling]
+
 D --> E
-E --> F[AI Summary]
-F --> G[Final Output]
-``
+
+E --> F[🤖 AI / LLM Node<br>
+- Generate executive summary<br>
+- Highlight insights and trends]
+
+F --> G[📤 Final Output<br>
+- Click Rate<br>
+- Reporting Rate<br>
+- Scenario<br>
+- Risk Label]
