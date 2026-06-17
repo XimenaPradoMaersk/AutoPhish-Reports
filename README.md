@@ -79,19 +79,11 @@ The solution automates phishing reporting using a multi-step AI workflow:
 ## 🧩 Solution Architecture
 
 ```mermaid
-flowchart LR
-
-A[📥 Input Data<br>Phishing Simulation (Excel/CSV)]
---> B[🧹 Data Preprocessing<br>Remove duplicates + prioritize actions]
-
-B --> C[📊 Click Metrics Calculation<br>Total users<br>Clicked users<br>Click rate]
-
-B --> D[📢 Reporting Metrics Calculation<br>Reported users<br>Reporting rate]
-
-C --> E[🧠 Risk Classification]
+flowchart TD
+A[Input Data] --> B[Preprocessing]
+B --> C[Click Metrics]
+B --> D[Reporting Metrics]
+C --> E[Risk Analysis]
 D --> E
-
-E --> F[🤖 AI / LLM Node<br>Executive Summary Generation]
-
-F --> G[📤 Final Output<br>Insights + Metrics + Risk Level]
-``
+E --> F[AI Summary]
+F --> G[Output]
