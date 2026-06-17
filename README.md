@@ -31,7 +31,6 @@ It eliminates manual reporting while providing actionable insights, including tr
 - Increases efficiency and scalability of reporting across multiple campaigns
 
 ## 🧩 End-to-End Pipeline
-
 ```mermaid
 flowchart LR
 A[Input Data - Excel/CSV] --> B[Data Preprocessing]
@@ -46,8 +45,8 @@ E --> F[AI Summary]
 
 F --> G[Final Output - Click Rate / Reporting Rate / Scenario / Risk]
 ``
-## ⚙️ Data Processing
 
+## ⚙️ Data Processing
 The preprocessing logic (originally implemented in Dify) is available in:
 `/src/data_preprocessing.py`
 
@@ -98,5 +97,3 @@ The pipeline outputs structured metrics ready for dashboards and reporting:
 - **Risk Label** – Assigned risk level (e.g., Low, Medium, High)  
 
 These outputs are designed to feed directly into human risk dashboards and support data-driven decision-making.
-
-
