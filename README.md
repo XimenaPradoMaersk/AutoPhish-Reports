@@ -49,3 +49,13 @@ It calculates:
 - Total users
 - Clicked users
 - Click rate
+
+## 📊 Reporting Metrics
+
+The reporting logic is available in:
+`/src/reporting_metrics.py`
+
+It calculates:
+- Unique reported users
+- Reporting rate
+- User engagement with phishing reporting mechanisms
