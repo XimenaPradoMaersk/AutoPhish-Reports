@@ -39,3 +39,13 @@ It handles:
 - Data cleaning
 - Duplicate removal
 - User activity prioritization
+
+## 📊 Metrics Calculation
+
+The metrics logic is available in:
+`/src/metrics_calculation.py`
+
+It calculates:
+- Total users
+- Clicked users
+- Click rate
