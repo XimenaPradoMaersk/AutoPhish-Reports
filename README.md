@@ -71,4 +71,25 @@ It classifies phishing outcomes into:
 - High Risk
 
 Based on user behavior (click vs report rates), enabling targeted awareness actions.
-``
+
+## 🧩 End-to-End Pipeline
+
+The solution automates phishing reporting using a multi-step AI workflow:
+## 🧩 Solution Architecture
+
+```mermaid
+flowchart LR
+
+A[📥 Input Data<br>Phishing Simulation (Excel/CSV)]
+--> B[🧹 Data Preprocessing<br>Remove duplicates + prioritize actions]
+
+B --> C[📊 Click Metrics Calculation<br>Total users<br>Clicked users<br>Click rate]
+
+B --> D[📢 Reporting Metrics Calculation<br>Reported users<br>Reporting rate]
+
+C --> E[🧠 Risk Classification]
+D --> E
+
+E --> F[🤖 AI / LLM Node<br>Executive Summary Generation]
+
+F --> G[📤 Final Output<br>Insights + Metrics + Risk Level]
