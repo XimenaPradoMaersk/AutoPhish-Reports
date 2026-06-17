@@ -59,3 +59,16 @@ It calculates:
 - Unique reported users
 - Reporting rate
 - User engagement with phishing reporting mechanisms
+
+## 🧠 Risk Classification
+
+The risk engine is implemented in:
+`/src/risk_classification.py`
+
+It classifies phishing outcomes into:
+- Low Risk
+- Medium Risk
+- High Risk
+
+Based on user behavior (click vs report rates), enabling targeted awareness actions.
+``
