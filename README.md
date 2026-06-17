@@ -44,8 +44,7 @@ D --> E
 E --> F[AI Summary]
 
 F --> G[Final Output - Click Rate / Reporting Rate / Scenario / Risk]
-``
-
+```
 ## ⚙️ Data Processing
 The preprocessing logic (originally implemented in Dify) is available in:
 `/src/data_preprocessing.py`
