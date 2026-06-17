@@ -87,35 +87,15 @@ These outputs are designed to feed directly into human risk dashboards and suppo
 
 ```mermaid
 flowchart LR
+A[Input Data - Excel/CSV] --> B[Data Preprocessing]
 
-A[📥 Input Data<br>Phishing Simulation Files<br>(Excel / CSV)]
---> B[🧹 Data Preprocessing<br>
-- Remove duplicates<br>
-- Normalize data<br>
-- Prioritize user actions]
+B --> C[Click Metrics]
+B --> D[Reporting Metrics]
 
-B --> C[📊 Click Metrics Calculation<br>
-- Total users<br>
-- Clicked users<br>
-- Click rate]
-
-B --> D[📢 Reporting Metrics Calculation<br>
-- Reported users<br>
-- Reporting rate]
-
-C --> E[🧠 Risk Classification<br>
-- Behavioral analysis<br>
-- Scenario definition<br>
-- Risk labeling]
-
+C --> E[Risk Classification]
 D --> E
 
-E --> F[🤖 AI / LLM Node<br>
-- Generate executive summary<br>
-- Highlight insights and trends]
+E --> F[AI Summary]
 
-F --> G[📤 Final Output<br>
-- Click Rate<br>
-- Reporting Rate<br>
-- Scenario<br>
-- Risk Label]
+F --> G[Final Output - Click Rate / Reporting Rate / Scenario / Risk]
+``
