@@ -30,72 +30,64 @@ It eliminates manual reporting while providing actionable insights, including tr
 - Accelerates decision-making with real-time, actionable insights
 - Increases efficiency and scalability of reporting across multiple campaigns
 
-## 🧩 End-to-End Pipeline
+## 🧩 End-to-End Workflow Pipeline
+
 ```mermaid
-flowchart LR
-A[Input Data - Excel/CSV] --> B[Data Preprocessing]
-
-B --> C[Click Metrics]
-B --> D[Reporting Metrics]
-
-C --> E[Risk Classification]
-D --> E
-
-E --> F[AI Summary]
-
-F --> G[Final Output - Click Rate / Reporting Rate / Scenario / Risk]
+flowchart TD
+    A[Start: Upload Telemetry CSVs] --> B[node1_deduplication.py]
+    
+    B -->|1. Cleans Data & Counts Metrics| C[Calculate Click & Open Rates]
+    B -->|2. Pipes Dynamic Target Baseline| D[node2_reporting_metrics.py]
+    
+    D -->|3. Extracts Telemetry Metrics| E[Calculate Reporting Rates]
+    
+    C -->|Click Rate| F[node3_risk_matrix.py]
+    E -->|Reporting Rate| F
+    
+    F -->|4. Posture Matrix Evaluation| G[Consolidated Executive JSON Report]
+    G --> H[End Node: Dashboard & AI Summary Feed]
 ```
-## ⚙️ Data Processing
-The preprocessing logic (originally implemented in Dify) is available in:
-`/src/data_preprocessing.py`
 
-It handles:
-- Data cleaning
-- Duplicate removal
-- User activity prioritization
+## ⚙️ Data Preprocessing & Core Metrics
+The primary chunked streaming and action-priority filter logic is available in:
+`./node1_deduplication.py`
 
-## 📊 Metrics Calculation
+It resolves cloud token limitations and handles:
+- **Dynamic URL Resolution:** Deep-scans loose metadata objects to extract remote file streams.
+- **Action Prioritization:** Keeps only the single highest-value interaction milestone per unique employee following the matrix rule: `Link Clicked > Mail Opened > Delivered > Bounced`.
+- **Primary KPIs:** Extracts the overall audience baseline (`final_rows`), unique email clickers, and email opens directly from source memory.
+- **Chunked Stream Packing:** Splits the resulting clean database into small bounded arrays to bypass platform character overhead ceilings.
 
-The metrics logic is available in:
-`/src/metrics_calculation.py`
+## 📊 Reporting Metrics Calculation
+The user compliance indicator engine is available in:
+`./node2_reporting_metrics.py`
 
-It calculates:
-- Total users
-- Clicked users
-- Click rate
+It parses the separate reporting telemetry and handles:
+- **Reporter Identity Deduplication:** Isolates and creates unique signature maps of employees who reported the active security threat.
+- **Dynamic Baseline Computation:** Receives the live target volume indicator straight from Node 1 to compute the global corporate **Reporting Rate** mapping.
 
-## 📊 Reporting Metrics
+## 🧠 Risk Assessment Matrix
+The strategic multi-quadrant decision framework is available in:
+`./node3_risk_matrix.py`
 
-The reporting logic is available in:
-`/src/reporting_metrics.py`
+It cross-references live campaign ratios against adjustable target baselines to classify enterprise behaviors into specific postures:
+- **🟢 Low Risk** *(High Report / Low Click)* – Users actively defend the boundary without interacting.
+- **🟡 Medium Risk** *(High Click / High Report)* – Mixed behavior where training vectors are engaged but reported.
+- **🔴 High Risk** *(High Click / Low Report)* – Critical posture failures with high compromise and low alerting.
+- **⚪ Moderate Risk** *(Low Click / Low Report)* – Organizational apathy or low simulation interaction.
 
-It calculates:
-- Unique reported users
-- Reporting rate
-- User engagement with phishing reporting mechanisms
+## 🎛️ Local Orchestration Engine
+The pipeline orchestration simulator is available in:
+`./main.py`
 
-## 🧠 Risk Classification
+It maps the cloud runtime logic locally. It sequentially feeds inputs across all modules, handles type casting safety wrappers, and generates a structured telemetry payload ready for visual dashboards or security operational notification centers.
 
-The risk engine is implemented in:
-`/src/risk_classification.py`
-
-It classifies phishing outcomes into:
-- Low Risk
-- Medium Risk
-- High Risk
-
-Based on user behavior (click vs report rates), enabling targeted awareness actions.
-
-## 📤 Final Output
-
-The pipeline outputs structured metrics ready for dashboards and reporting:
-
-- **Click Rate** – Percentage of users who clicked the phishing link  
-- **Reporting Rate** – Percentage of users who reported the email  
-- **Scenario** – Behavioral classification based on user actions  
-- **Risk Label** – Assigned risk level (e.g., Low, Medium, High)  
-
-These outputs are designed to feed directly into human risk dashboards and support data-driven decision-making.
+## 📤 Final Pipeline Outputs
+The unified architecture returns a clean structured dataset ready to back reporting infrastructure:
+- **Original & Cleaned Row Audits:** Complete trace metrics detailing duplicate entries purged.
+- **Click & Open Rates:** True interaction ratios normalized around the processed sample volume.
+- **Reporting Rate:** Dynamic company reporting score metrics.
+- **Assigned Scenario & Risk Tier:** Evaluated organizational risk labels alongside descriptive remediation metadata.
 
 ## 🧠 Implementation Note
 
