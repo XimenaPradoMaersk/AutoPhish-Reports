@@ -30,23 +30,16 @@ It eliminates manual reporting while providing actionable insights, including tr
 - Accelerates decision-making with real-time, actionable insights
 - Increases efficiency and scalability of reporting across multiple campaigns
 
-## 🧩 End-to-End Workflow Pipeline
+## 🧩 End-to-End Pipeline
 
 ```mermaid
-flowchart TD
-    A[Start: Upload Telemetry CSVs] --> B[node1_deduplication.py]
-    
-    B -->|1. Cleans Data & Counts Metrics| C[Calculate Click & Open Rates]
-    B -->|2. Pipes Dynamic Target Baseline| D[node2_reporting_metrics.py]
-    
-    D -->|3. Extracts Telemetry Metrics| E[Calculate Reporting Rates]
-    
-    C -->|Click Rate| F[node3_risk_matrix.py]
-    E -->|Reporting Rate| F
-    
-    F -->|4. Posture Matrix Evaluation| G[Consolidated Executive JSON Report]
-    G --> H[End Node: Dashboard & AI Summary Feed]
+flowchart LR
+A[📥 Input Data<br>Phishing Logs & Reporting Files] --> B[🧹 Deduplication & Core Metrics]
+B --> C[📊 Reporting Metrics Calculation]
+C --> D[🧠 Risk Assessment Matrix]
+D --> E[📤 Output<br>KPIs + Risk Level]
 ```
+Each node is designed to progressively transform raw phishing telemetry into actionable risk insights, ensuring data accuracy, consistency, and executive-level visibility.
 
 ## ⚙️ Data Preprocessing & Core Metrics
 The primary chunked streaming and action-priority filter logic is available in:
