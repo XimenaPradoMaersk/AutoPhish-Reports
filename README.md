@@ -4,6 +4,8 @@
 - Ximena Prado Zegarra
 - Namrata Dixit
 
+## 🚀 Project Name: AutoPhish Reports
+
 ## 💡 Project Overview
 This project delivers an AI-driven solution to automate phishing campaign reporting at Maersk. It replaces manual data processing from tools like Trend Vision One and Abnormal AI with an automated workflow that consolidates, calculates, and analyzes results. The solution also generates insights by identifying trends, enabling more targeted awareness and reducing human cyber risk.
 
