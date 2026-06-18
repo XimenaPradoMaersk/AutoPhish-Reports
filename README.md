@@ -1,4 +1,4 @@
-# Cyber Hackathon Project 🚀 - AutoPhish Reports
+# Cyber AI Hackathon Project 🚀 - AutoPhish Reports
 
 ## 👥 Team
 - Ximena Prado Zegarra
