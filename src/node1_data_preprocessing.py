@@ -1,6 +1,5 @@
 """
-Phishing Campaign Analytics Pipeline - Node 1: Deduplication & Core Metrics
-Author: Your Team Name (Hackathon 2026)
+Node 1: Deduplication & Core Metrics
 Description: Extracts raw phishing logs from a dynamic storage URL, deduplicates data using 
              a priority-based interaction matrix, and computes primary campaign KPIs.
 """
