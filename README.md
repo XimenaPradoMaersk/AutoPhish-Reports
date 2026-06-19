@@ -40,14 +40,12 @@ Importantly, this capability can be continuously evolved to deliver deeper intel
 
 ## 🧩 End-to-End Pipeline
 
-```mermaid
 flowchart LR
-A[📥 Input Data<br>Phishing Logs & Reporting Files] --> B[🧹 Deduplication & Core Metrics]
+A["📥 Input Data<br>Phishing Logs & Reporting Files"] --> B[🧹 Deduplication & Core Metrics]
 B --> C[📊 Reporting Metrics Calculation]
 C --> D[🧠 Risk Assessment Matrix]
-D --> E[📤 Output<br>KPIs + Risk Level]
-```
-Each node is designed to progressively transform raw phishing telemetry into actionable risk insights, ensuring data accuracy, consistency, and executive-level visibility.
+D --> E["🧾 Report Formatting<br>(Template Node)"]
+E --> F["📤 Output<br>Formatted Report + Risk Level"]
 
 ## ⚙️ Data Preprocessing & Core Metrics
 The primary chunked streaming and action-priority filter logic is available in:
@@ -76,6 +74,15 @@ It cross-references live campaign ratios against adjustable target baselines to 
 - **🟡 Medium Risk** *(High Click / High Report)* – Mixed behavior where training vectors are engaged but reported.
 - **🔴 High Risk** *(High Click / Low Report)* – Critical posture failures with high compromise and low alerting.
 - **⚪ Moderate Risk** *(Low Click / Low Report)* – Organizational apathy or low simulation interaction.
+
+## 🧾 Output Formatting (Template Node)
+To improve readability and usability, a Template Node was introduced before the final output. This node formats the calculated metrics into a clean, human-readable report.
+Transforms raw metrics into an executive-friendly summary and ensures consistent formatting across outputs.
+
+Makes results ready for:
+- Reporting dashboards
+- Leadership summaries
+- Demo presentations
 
 ## 🎛️ Local Orchestration Engine
 The pipeline orchestration simulator is available in:
