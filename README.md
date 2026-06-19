@@ -47,6 +47,7 @@ B --> C["📊 Reporting Metrics Calculation"]
 C --> D["🧠 Risk Assessment Matrix"]
 D --> E["🧾 Report Formatting<br>(Template Node)"]
 E --> F["📤 Output<br>Formatted Report + Risk Level"]
+```
 
 ## ⚙️ Data Preprocessing & Core Metrics
 The primary chunked streaming and action-priority filter logic is available in:
