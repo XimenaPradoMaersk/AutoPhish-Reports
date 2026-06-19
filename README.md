@@ -78,6 +78,9 @@ It cross-references live campaign ratios against adjustable target baselines to 
 - **⚪ Moderate Risk** *(Low Click / Low Report)* – Organizational apathy or low simulation interaction.
 
 ## 🧾 Output Formatting (Template Node)
+The user compliance indicator engine is available in:
+`./node4_format_report.py`
+
 To improve readability and usability, a Template Node was introduced before the final output. This node formats the calculated metrics into a clean, human-readable report.
 Transforms raw metrics into an executive-friendly summary and ensures consistent formatting across outputs.
 
@@ -92,12 +95,13 @@ The pipeline orchestration simulator is available in:
 
 It maps the cloud runtime logic locally. It sequentially feeds inputs across all modules, handles type casting safety wrappers, and generates a structured telemetry payload ready for visual dashboards or security operational notification centers.
 
-## 📤 Final Pipeline Outputs
-The unified architecture returns a clean structured dataset ready to back reporting infrastructure:
-- **Original & Cleaned Row Audits:** Complete trace metrics detailing duplicate entries purged.
-- **Click & Open Rates:** True interaction ratios normalized around the processed sample volume.
-- **Reporting Rate:** Dynamic company reporting score metrics.
-- **Assigned Scenario & Risk Tier:** Evaluated organizational risk labels alongside descriptive remediation metadata.
+📤 Final Pipeline Outputs
+The pipeline produces both structured data and a formatted report, enabling immediate use for analysis and decision-making:
+
+📊 Core Metrics: Open Rate, Click Rate, Reporting Rate
+🧹 Data Audit: Original vs. cleaned records and duplicates removed
+🧠 Risk Insights: Scenario classification and risk level
+📋 Formatted Report: Executive-ready summary via Template Node
   
 ## 🧠 Implementation Note
 
