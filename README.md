@@ -89,7 +89,7 @@ The unified architecture returns a clean structured dataset ready to back report
 - **Click & Open Rates:** True interaction ratios normalized around the processed sample volume.
 - **Reporting Rate:** Dynamic company reporting score metrics.
 - **Assigned Scenario & Risk Tier:** Evaluated organizational risk labels alongside descriptive remediation metadata.
-- 
+  
 ## 🧠 Implementation Note
 
 The solution was built using Dify workflows with Python code nodes.  
