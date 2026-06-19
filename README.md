@@ -40,10 +40,11 @@ Importantly, this capability can be continuously evolved to deliver deeper intel
 
 ## 🧩 End-to-End Pipeline
 
+```mermaid
 flowchart LR
-A["📥 Input Data<br>Phishing Logs & Reporting Files"] --> B[🧹 Deduplication & Core Metrics]
-B --> C[📊 Reporting Metrics Calculation]
-C --> D[🧠 Risk Assessment Matrix]
+A["📥 Input Data<br>Phishing Logs & Reporting Files"] --> B["🧹 Deduplication & Core Metrics"]
+B --> C["📊 Reporting Metrics Calculation"]
+C --> D["🧠 Risk Assessment Matrix"]
 D --> E["🧾 Report Formatting<br>(Template Node)"]
 E --> F["📤 Output<br>Formatted Report + Risk Level"]
 
