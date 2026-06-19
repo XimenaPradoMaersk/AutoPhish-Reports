@@ -5,15 +5,21 @@
 - Namrata Dixit
 
 ## 💡 Project Overview
-This project delivers an AI-driven solution to automate phishing campaign reporting at Maersk. It replaces manual data processing from tools like Trend Vision One and Abnormal AI with an automated workflow that consolidates, calculates, and analyzes results. The solution also generates insights by identifying trends, enabling more targeted awareness and reducing human cyber risk.
+This project delivers an AI-driven solution to automate phishing campaign reporting at Maersk. At present, data from platforms such as Trend Vision One and Abnormal AI is manually consolidated and calculated, requiring considerable time and resource investment while inherently carrying a risk of human error. 
+
+The proposed solution introduces an automated workflow to streamline data processing, improving efficiency, consistency, and accuracy. In addition, it enables advanced analysis of phishing campaign data by identifying trends and patterns over time. These insights will support the Awareness team’s efforts to develop robust human risk metrics, allowing for more targeted, behaviour driven interventions to effectively reduce cyber risk across the organisation.
 
 ## 🔐 Problem
-Phishing campaign data is currently generated across multiple platforms, such as Trend Vision One and Abnormal AI, requiring manual extraction and calculation.
-This process is time-consuming, prone to errors, and limits the ability to quickly identify trends, high-risk users, and recurring behaviours—reducing the effectiveness of cyber awareness efforts.
+Phishing campaign data is currently distributed across multiple platforms, including Trend Vision One and Abnormal AI, necessitating manual extraction, consolidation, and calculation. This fragmented and labour-intensive approach requires significant time and dedicated resources from both CSOs and the Awareness team, diverting attention from higher priority operational responsibilities.
+
+In addition to the inefficiencies, the reliance on manual processes introduces a heightened risk of inconsistencies and human error, impacting the reliability of reported outcomes. The absence of timely, automated insights limits the ability to generate immediate post campaign results, thereby delaying response and decision making.
+
+Furthermore, the effort required to process raw data has restricted the systematic analysis of behavioural patterns and trends. As a result, the identification of high risk users, recurring vulnerabilities, and emerging risk indicators remains underdeveloped, reducing the overall effectiveness and maturity of cyber awareness and human risk management efforts.
 
 ## ⚙️ Solution
-This project introduces an AI-powered solution that automates the consolidation, calculation, and analysis of phishing campaign data.
-It eliminates manual reporting while providing actionable insights, including trend analysis and detection of risky behaviours. This enables faster, data-driven decision-making and more targeted cyber awareness initiatives.
+This project introduces an AI powered solution to address the critical inefficiencies and risks associated with current phishing campaign reporting. By automating the consolidation, calculation, and analysis of data across multiple platforms, it eliminates the dependency on manual processing and significantly reduces the time and resource burden on CSOs and the Awareness team. The solution enables near real time generation of accurate, consistent insights, supporting faster and more informed decision making. It also unlocks the potential ability to proactively identify trends, high risk behaviours, and vulnerable user groups that were previously overlooked due to operational constraints.
+
+Importantly, this capability can be continuously evolved to deliver deeper intelligence—such as identifying emerging risk areas, regional risk patterns, and behavioural trends over time—thereby strengthening the organisation’s human risk metrics framework. This ensures a more proactive, data driven approach to cyber awareness, directly supporting the reduction of human cyber risk at scale.
 
 ## 🛠️ Technologies
 - **Dify** – used to design and orchestrate the end-to-end AI workflow  
@@ -81,11 +87,12 @@ The unified architecture returns a clean structured dataset ready to back report
 - **Click & Open Rates:** True interaction ratios normalized around the processed sample volume.
 - **Reporting Rate:** Dynamic company reporting score metrics.
 - **Assigned Scenario & Risk Tier:** Evaluated organizational risk labels alongside descriptive remediation metadata.
-
+- 
 ## 🧠 Implementation Note
 
 The solution was built using Dify workflows with Python code nodes.  
-For demonstration purposes, the core logic has been modularized into standalone Python scripts.
+For demonstration purposes, the core logic has been modularized into standalone Python scripts.  
+Additionally, any percentages shown are for demo purposes only; final benchmarks will be defined and calibrated in the production solution.
 
 ## 🔮 Future Improvements
 
