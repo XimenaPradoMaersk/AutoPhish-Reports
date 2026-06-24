@@ -98,10 +98,13 @@ It maps the cloud runtime logic locally. It sequentially feeds inputs across all
 📤 Final Pipeline Outputs
 The pipeline produces both structured data and a formatted report, enabling immediate use for analysis and decision-making:
 
-📊 Core Metrics: Open Rate, Click Rate, Reporting Rate
-🧹 Data Audit: Original vs. cleaned records and duplicates removed
-🧠 Risk Insights: Scenario classification and risk level
-📋 Formatted Report: Executive-ready summary via Template Node
+📊 Core Metrics: Open Rate, Click Rate, Reporting Rate.
+
+🧹 Data Audit: Original vs. cleaned records and duplicates removed.
+
+🧠 Risk Insights: Scenario classification and risk level.
+
+📋 Formatted Report: Executive-ready summary via Template Node.
   
 ## 🧠 Implementation Note
 
